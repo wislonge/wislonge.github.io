@@ -1,14 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
-    <script type="module" crossorigin src="/assets/index.47dbe16e.js"></script>
-    <link rel="stylesheet" href="/assets/index.0daba656.css">
-  </head>
-  <body>
-  <iframe src="https://gamma.app/embed/5iie37mqp9asoji" style="width: 100%; max-width: 100%; height: 1000px" allow="fullscreen" title="中冀云智科技有限公司"></iframe>
-  </body>
+    <title>Excel-like Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        .planet {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-size: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .planet::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            background-size: cover;
+            animation: surface-spin 5s linear infinite;
+        }
+        @keyframes surface-spin {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        table {
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>Service Name</th>
+        <th>Planet</th>
+        <th>D</th>
+        <th>E</th>
+        <th>F</th>
+        <th>G</th>
+        <th>H</th>
+        <th>I</th>
+        <th>3.6</th>
+        <th>3.5</th>
+        <th>3.4</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Mercury</td>
+        <td><div class="planet" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2e/Mercury_in_true_color.jpg'); animation-duration: 3s;"></div></td>
+        <td>Fine</td><td>Fine</td><td>Good</td><td>Good</td><td>Bad</td><td>Good</td><td>Good</td>
+    </tr>
+    <tr>
+        <td>Venus</td>
+        <td><div class="planet" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg'); animation-duration: 4s;"></div></td>
+        <td>Fine</td><td>Fine</td><td>Good</td><td>Good</td><td>Bad</td><td>Good</td><td>Good</td>
+    </tr>
+    <tr>
+        <td>Earth</td>
+        <td><div class="planet" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg'); animation-duration: 5s;"></div></td>
+        <td>Fine</td><td>Fine</td><td>Good</td><td>Good</td><td>Bad</td><td>Good</td><td>Good</td>
+    </tr>
+    <tr>
+        <td>Mars</td>
+        <td><div class="planet" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg'); animation-duration: 6s;"></div></td>
+        <td>Fine</td><td>Fine</td><td>Good</td><td>Good</td><td>Bad</td><td>Good</td><td>Good</td>
+    </tr>
+    <tr>
+        <td>Jupiter</td>
+        <td><div class="planet" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/54/Jupiter_by_Cassini-Huygens.jpg'); animation-duration: 7s;"></div></td>
+        <td>Fine</td><td>Fine</td><td>Good</td><td>Good</td><td>Bad</td><td>Good</td><td>Good</td>
+    </tr>
+    <tr>
+        <td>Saturn</td>
+        <td><div class="planet" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg'); animation-duration: 8s;"></div></td>
+        <td>Fine</td><td>Fine</td><td>Good</td><td>Good</td><td>Bad</td><td>Good</td><td>Good</td>
+    </tr>
+    <tr>
+        <td>Uranus</td>
+        <td><div class="planet" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg'); animation-duration: 9s;"></div></td>
+        <td>Fine</td><td>Fine</td><td>Good</td><td>Good</td><td>Bad</td><td>Good</td><td>Good</td>
+    </tr>
+    <tr>
+        <td>Neptune</td>
+        <td><div class="planet" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg'); animation-duration: 10s;"></div></td>
+        <td>Fine</td><td>Fine</td><td>Good</td><td>Good</td><td>Bad</td><td>Good</td><td>Good</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
 </html>
